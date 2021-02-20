@@ -1,28 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:my_portifolio/home_screen.dart';
-import 'package:my_portifolio/teste2.dart';
-import 'package:simple_animations/simple_animations.dart';
+import 'package:my_portifolio/utils/app_routes.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Color(0xff03016e),
+        fontFamily: 'Savings Bond Shadow',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                fontSize: 26,
+                fontFamily: 'Bebas Neue',
+                color: Color(0xff03016e),
+              ),
+            ),
       ),
       initialRoute: '/',
       routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => Teste2(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
-        //'/second': (context) => SecondScreen(),
+        AppRoutes.HOME_SCREEN: (ctx) => HomeScreen(),
       },
     );
   }
