@@ -1,0 +1,6 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+my/com/lucad/br/my_portifolio/BuildConfig.java
+ my.com.lucad.br.my_portifolio.BuildConfig
+my/com/lucad/br/my_portifolio/MainActivity.java
+ my.com.lucad.br.my_portifolio.MainActivity
