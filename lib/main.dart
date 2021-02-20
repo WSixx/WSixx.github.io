@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portifolio/home_screen.dart';
+import 'package:my_portifolio/teste2.dart';
 import 'package:simple_animations/simple_animations.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
-        '/': (context) => HomeScreen(),
+        '/': (context) => Teste2(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         //'/second': (context) => SecondScreen(),
       },

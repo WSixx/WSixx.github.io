@@ -10,34 +10,22 @@ class BackgroundBubble extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          tileMode: TileMode.mirror,
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color(0xff010329),
-            Color(0xff010047),
-          ],
-          stops: [
-            0,
-            1,
-          ],
-        ),
+        color: Color(0xff03016e),
         backgroundBlendMode: BlendMode.plus,
       ),
       child: PlasmaRenderer(
         type: PlasmaType.bubbles,
-        particles: 89,
-        color: Color(0x44ffffff),
-        blur: 0.24,
+        particles: 100,
+        color: Color(0x44fbf6f6),
+        blur: 0.3,
         size: 0.02,
-        speed: 1.58,
-        offset: 0,
+        speed: 0.39,
+        offset: 0.25,
         blendMode: BlendMode.plus,
-        variation1: 0.36,
-        variation2: 0.1,
-        variation3: 0,
-        rotation: 0.04,
+        variation1: 0.9,
+        variation2: 0.07,
+        variation3: 0.44,
+        rotation: -0.25,
       ),
     );
   }

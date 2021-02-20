@@ -5,7 +5,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[900],
+      backgroundColor: Color(0xff17005b),
       body: Stack(
         children: [
           Row(
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
               Container(
                 width: 300,
                 height: double.infinity,
-                color: Colors.blueAccent,
+                color: Colors.red,
                 child: Column(
                   children: [
                     Container(
