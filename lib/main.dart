@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portifolio/home_screen.dart';
+import 'package:my_portifolio/splash_screen.dart';
 import 'package:my_portifolio/utils/app_routes.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Savings Bond Shadow',
         textTheme: ThemeData.light().textTheme.copyWith(
               headline6: TextStyle(
-                fontSize: 26,
+                fontSize: 28,
                 fontFamily: 'Bebas Neue',
                 color: Color(0xff03016e),
               ),
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         AppRoutes.HOME_SCREEN: (ctx) => HomeScreen(),
+        AppRoutes.SPLASH_SCREEN: (ctx) => SplashScreen(),
       },
     );
   }

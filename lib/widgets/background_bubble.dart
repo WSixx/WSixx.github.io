@@ -9,14 +9,15 @@ class BackgroundBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: Color(0xff03016e),
+      decoration: const BoxDecoration(
+        //color: Color(0xff03016e),
+        color: Colors.black87,
         backgroundBlendMode: BlendMode.plus,
       ),
       child: PlasmaRenderer(
         type: PlasmaType.bubbles,
         particles: 100,
-        color: Color(0x44fbf6f6),
+        color: const Color(0x44fbf6f6),
         blur: 0.3,
         size: 0.02,
         speed: 0.39,

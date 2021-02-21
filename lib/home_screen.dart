@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:animated_widgets/animated_widgets.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portifolio/widgets/background_bubble.dart';
 import 'package:my_portifolio/widgets/shake.dart';
@@ -12,13 +13,30 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   bool _enabled = false;
+  final AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
+
+  Future<void> playAudio() async {
+    await Future.delayed(
+      const Duration(milliseconds: 100),
+      () {
+        assetsAudioPlayer.open(
+          Audio.network('assets/audio/starwars.mp3'),
+        );
+      },
+    );
+  }
 
   void startTimer() {
-    Future.delayed(const Duration(seconds: 2), () {
+    Future<void>.delayed(const Duration(seconds: 2), () {
       setState(() {
         _enabled = !_enabled;
       });
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
   }
 
   @override
@@ -28,11 +46,10 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Row(
         children: [
           Expanded(
-            flex: 1,
             child: Container(
               width: 300,
               height: double.infinity,
-              color: Colors.red,
+              color: Colors.black,
               child: Column(
                 children: [
                   Column(
@@ -40,21 +57,21 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: [
                       ShakeAnimatedWidget(
                         enabled: _enabled,
-                        duration: Duration(milliseconds: 1500),
+                        duration: const Duration(milliseconds: 1500),
                         shakeAngle: Rotation.deg(z: 50),
-                        curve: Curves.linear,
                         child: GestureDetector(
                           onTap: () {
                             setState(() {
                               _enabled = !_enabled;
                               startTimer();
+                              //playAudio();
                             });
                           },
                           child: Container(
-                            padding: EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(20),
                             width: 200,
                             height: 200,
-                            child: CircleAvatar(
+                            child: const CircleAvatar(
                               radius: 30,
                               backgroundColor: Colors.black,
                               backgroundImage: NetworkImage(
@@ -64,29 +81,36 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       ShakeWidget(
-                        duration: Duration(seconds: 2),
+                        duration: const Duration(seconds: 2),
                         child: TextButton(
+                          onPressed: () {},
                           child: Text(
                             'HOME',
                             style: Theme.of(context).textTheme.headline6,
+                            textAlign: TextAlign.start,
                           ),
-                          onPressed: () {},
                         ),
                       ),
-                      TextButton(
-                        child: Text(
-                          'ABOUT',
-                          style: TextStyle(fontSize: 20),
-                        ),
-                        onPressed: () {
-                          setState(() {});
-                        },
+                      const SizedBox(
+                        height: 15,
                       ),
-                      SizedBox(
+                      ShakeWidget(
+                        duration: const Duration(seconds: 2),
+                        child: TextButton(
+                          onPressed: () {
+                            setState(() {});
+                          },
+                          child: Text(
+                            'ABOUT',
+                            style: Theme.of(context).textTheme.headline6,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
                         height: 20,
                       ),
                     ],
@@ -97,7 +121,39 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Expanded(
             flex: 4,
-            child: BackgroundBubble(),
+            child: Stack(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Center(
+                    child: Column(
+                      children: const [
+                        Text(
+                          'Lucas Gonçalves!',
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontFamily: 'stjedise',
+                            fontSize: 30,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          'Estudante de Ciências da Computação - 5/8',
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontFamily: 'stjedise',
+                            fontSize: 26,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const BackgroundBubble(),
+              ],
+            ),
           ),
         ],
       ),
