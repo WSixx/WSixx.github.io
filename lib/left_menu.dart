@@ -2,7 +2,9 @@ import 'package:animated_widgets/widgets/rotation_animated.dart';
 import 'package:animated_widgets/widgets/shake_animated_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_portifolio/widgets/shake.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LeftMenu extends StatefulWidget {
   @override
@@ -88,7 +90,30 @@ class _LeftMenuState extends State<LeftMenu> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 25,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(
+                      icon: Icon(FontAwesomeIcons.linkedin),
+                      color: Colors.blue[800],
+                      onPressed: () async {
+                        await launch(
+                            'https://www.linkedin.com/in/lucassgon%C3%A7alves/');
+                      },
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    IconButton(
+                      icon: Icon(FontAwesomeIcons.github),
+                      color: Colors.white,
+                      onPressed: () async {
+                        await launch('https://github.com/WSixx');
+                      },
+                    ),
+                  ],
                 ),
               ],
             ),
