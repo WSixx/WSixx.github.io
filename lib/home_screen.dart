@@ -3,10 +3,14 @@ import 'dart:async';
 import 'package:animated_widgets/animated_widgets.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:carousel_pro/carousel_pro.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portifolio/body_text.dart';
 import 'package:my_portifolio/widgets/background_bubble.dart';
 import 'package:my_portifolio/widgets/shake.dart';
+import 'package:simple_animations/simple_animations.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -37,13 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: UniqueKey(),
       backgroundColor: Colors.transparent,
       body: Row(
         children: [
@@ -124,18 +124,125 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Padding(
             padding: const EdgeInsets.all(0),
-            child: SingleChildScrollView(
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.8,
+              height: 1000,
+              color: Colors.transparent,
+              //flex: 4,
               child: Container(
-                width: MediaQuery.of(context).size.width * 0.8,
-                height: 1000,
-                color: Colors.transparent,
-                //flex: 4,
-                child: Stack(
-                  children: [
-                    Column(
+                decoration: const BoxDecoration(
+                  //color: Color(0xff03016e),
+                  color: Colors.black87,
+                  backgroundBlendMode: BlendMode.plus,
+                ),
+                child: PlasmaRenderer(
+                  type: PlasmaType.bubbles,
+                  particles: 100,
+                  color: const Color(0x44fbf6f6),
+                  blur: 0.3,
+                  size: 0.02,
+                  speed: 0.39,
+                  offset: 0.25,
+                  blendMode: BlendMode.plus,
+                  variation1: 0.9,
+                  variation2: 0.07,
+                  variation3: 0.44,
+                  rotation: -0.25,
+                  child: SingleChildScrollView(
+                    child: Column(
                       children: [
                         Center(
                           child: BodyText(),
+                        ),
+                        Row(
+                          children: [
+                            GestureDetector(
+                              child: SizedBox(
+                                key: UniqueKey(),
+                                height: 200.0,
+                                width: 350.0,
+                                child: Carousel(
+                                  images: [
+                                    Image.asset(
+                                      'assets/images/moto.jpg',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/moto.jpg',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/moto.jpg',
+                                    ),
+                                  ],
+                                  dotSize: 4.0,
+                                  dotSpacing: 15.0,
+                                  dotColor: Colors.lightGreenAccent,
+                                  indicatorBgPadding: 5.0,
+                                  dotBgColor: Colors.blue.withOpacity(0.5),
+                                  borderRadius: true,
+                                ),
+                              ),
+                              onTap: () {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: const Text(
+                                        'A SnackBar has been shown.'),
+                                  ),
+                                );
+                              },
+                            ),
+                            SizedBox(
+                              height: 200.0,
+                              width: 350.0,
+                              child: Carousel(
+                                images: [
+                                  Image.asset(
+                                    'assets/images/moto.jpg',
+                                  ),
+                                  Image.asset(
+                                    'assets/images/moto.jpg',
+                                  ),
+                                  Image.asset(
+                                    'assets/images/moto.jpg',
+                                  ),
+                                ],
+                                dotSize: 4.0,
+                                dotSpacing: 15.0,
+                                dotColor: Colors.lightGreenAccent,
+                                indicatorBgPadding: 5.0,
+                                dotBgColor: Colors.blue.withOpacity(0.5),
+                                borderRadius: true,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 200.0,
+                              width: 350.0,
+                              child: Carousel(
+                                images: [
+                                  Image.asset(
+                                    'assets/images/moto.jpg',
+                                  ),
+                                  Image.asset(
+                                    'assets/images/moto.jpg',
+                                  ),
+                                  Image.asset(
+                                    'assets/images/moto.jpg',
+                                  ),
+                                  ExactAssetImage('assets/images/moto.jpg'),
+                                ],
+                                dotSize: 4.0,
+                                dotSpacing: 15.0,
+                                dotColor: Colors.lightGreenAccent,
+                                indicatorBgPadding: 5.0,
+                                dotBgColor: Colors.blue.withOpacity(0.5),
+                                borderRadius: false,
+                                moveIndicatorFromBottom: 180.0,
+                                noRadiusForIndicator: true,
+                                overlayShadow: true,
+                                overlayShadowColors: Colors.white,
+                                overlayShadowSize: 0.7,
+                              ),
+                            ),
+                          ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -143,14 +250,32 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               height: 200,
                               width: 300,
-                              child: CachedNetworkImage(
-                                imageUrl: 'http://via.placeholder.com/350x150',
-                                progressIndicatorBuilder:
-                                    (context, url, downloadProgress) =>
-                                        CircularProgressIndicator(
-                                            value: downloadProgress.progress),
-                                errorWidget: (context, url, error) =>
-                                    Icon(Icons.error),
+                              child: Image.network(
+                                  'http://via.placeholder.com/350x150'),
+                            ),
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'assets/images/moto.jpg',
+                              ),
+                            ),
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'assets/images/moto.jpg',
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'assets/images/moto.jpg',
                               ),
                             ),
                             Container(
@@ -164,7 +289,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 200,
                               width: 300,
                               child: Image.asset(
-                                'images/moto.jpg',
+                                'assets/images/moto.jpg',
                               ),
                             ),
                           ],
@@ -175,54 +300,28 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 200,
                               width: 300,
                               child: Image.asset(
-                                'images/moto.jpg',
+                                'assets/images/moto.jpg',
                               ),
                             ),
                             Container(
                               height: 200,
                               width: 300,
                               child: Image.asset(
-                                'images/moto.jpg',
+                                'assets/images/moto.jpg',
                               ),
                             ),
                             Container(
                               height: 200,
                               width: 300,
                               child: Image.asset(
-                                'images/moto.jpg',
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              height: 200,
-                              width: 300,
-                              child: Image.asset(
-                                'images/moto.jpg',
-                              ),
-                            ),
-                            Container(
-                              height: 200,
-                              width: 300,
-                              child: Image.asset(
-                                'images/moto.jpg',
-                              ),
-                            ),
-                            Container(
-                              height: 200,
-                              width: 300,
-                              child: Image.asset(
-                                'images/moto.jpg',
+                                'assets/images/moto.jpg',
                               ),
                             ),
                           ],
                         ),
                       ],
                     ),
-                    BackgroundBubble(),
-                  ],
+                  ),
                 ),
               ),
             ),

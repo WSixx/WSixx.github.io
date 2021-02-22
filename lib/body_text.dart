@@ -12,12 +12,21 @@ class BodyText extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
-          const Text(
-            'Lucas Gonçalves!',
-            style: TextStyle(
-              color: Colors.blue,
-              fontFamily: 'stjedise',
-              fontSize: 30,
+          GestureDetector(
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: const Text('A SnackBar has been shown.'),
+                ),
+              );
+            },
+            child: const Text(
+              'Lucas Gonçalves!',
+              style: TextStyle(
+                color: Colors.blue,
+                fontFamily: 'stjedise',
+                fontSize: 30,
+              ),
             ),
           ),
           const SizedBox(
