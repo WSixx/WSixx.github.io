@@ -51,28 +51,31 @@ class _HomeScreenState extends State<HomeScreen> {
                       Row(
                         children: [
                           GestureDetector(
-                            child: SizedBox(
-                              key: UniqueKey(),
-                              height: 200.0,
-                              width: 350.0,
-                              child: Carousel(
-                                images: [
-                                  Image.asset(
-                                    'assets/images/moto.jpg',
-                                  ),
-                                  Image.asset(
-                                    'assets/images/moto.jpg',
-                                  ),
-                                  Image.asset(
-                                    'assets/images/moto.jpg',
-                                  ),
-                                ],
-                                dotSize: 4.0,
-                                dotSpacing: 15.0,
-                                dotColor: Colors.lightGreenAccent,
-                                indicatorBgPadding: 5.0,
-                                dotBgColor: Colors.blue.withOpacity(0.5),
-                                borderRadius: true,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SizedBox(
+                                key: UniqueKey(),
+                                height: 200.0,
+                                width: 350.0,
+                                child: Carousel(
+                                  images: [
+                                    Image.asset(
+                                      'assets/images/moto.jpg',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/moto.jpg',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/moto.jpg',
+                                    ),
+                                  ],
+                                  dotSize: 4.0,
+                                  dotSpacing: 15.0,
+                                  dotColor: Colors.lightGreenAccent,
+                                  indicatorBgPadding: 5.0,
+                                  dotBgColor: Colors.blue.withOpacity(0.5),
+                                  borderRadius: true,
+                                ),
                               ),
                             ),
                             onTap: () {
