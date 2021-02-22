@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:simple_animations/simple_animations.dart';
 
 class BackgroundBubble extends StatelessWidget {
-  const BackgroundBubble({
-    Key key,
-  }) : super(key: key);
+  final Widget child;
+
+  BackgroundBubble({this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class BackgroundBubble extends StatelessWidget {
         variation2: 0.07,
         variation3: 0.44,
         rotation: -0.25,
+        child: child,
       ),
     );
   }
