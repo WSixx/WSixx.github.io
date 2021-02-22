@@ -143,8 +143,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               height: 200,
                               width: 300,
-                              child: Image.asset(
-                                'images/moto.jpg',
+                              child: CachedNetworkImage(
+                                imageUrl: 'http://via.placeholder.com/350x150',
+                                progressIndicatorBuilder:
+                                    (context, url, downloadProgress) =>
+                                        CircularProgressIndicator(
+                                            value: downloadProgress.progress),
+                                errorWidget: (context, url, error) =>
+                                    Icon(Icons.error),
                               ),
                             ),
                             Container(
