@@ -157,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               height: 200,
                               width: 300,
                               child: Image.asset(
-                                'images/moto.jpg',
+                                'assets/images/moto.jpg',
                               ),
                             ),
                             Container(
