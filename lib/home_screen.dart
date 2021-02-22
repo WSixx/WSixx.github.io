@@ -2,7 +2,9 @@ import 'dart:async';
 
 import 'package:animated_widgets/animated_widgets.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:my_portifolio/body_text.dart';
 import 'package:my_portifolio/widgets/background_bubble.dart';
 import 'package:my_portifolio/widgets/shake.dart';
 
@@ -45,7 +47,8 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.transparent,
       body: Row(
         children: [
-          Expanded(
+          Container(
+            width: MediaQuery.of(context).size.width * 0.2,
             child: Container(
               width: 300,
               height: double.infinity,
@@ -71,10 +74,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             padding: const EdgeInsets.all(20),
                             width: 200,
                             height: 200,
-                            child: const CircleAvatar(
+                            child: CircleAvatar(
                               radius: 30,
                               backgroundColor: Colors.black,
-                              backgroundImage: NetworkImage(
+                              backgroundImage: CachedNetworkImageProvider(
                                 'https://avatars.githubusercontent.com/u/54176892?s=460&u=4b0b4625a64dec5178064bb8ce62f95ea89d664e&v=4',
                               ),
                             ),
@@ -119,40 +122,103 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          Expanded(
-            flex: 4,
-            child: Stack(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: Center(
-                    child: Column(
-                      children: const [
-                        Text(
-                          'Lucas Gonçalves!',
-                          style: TextStyle(
-                            color: Colors.blue,
-                            fontFamily: 'stjedise',
-                            fontSize: 30,
-                          ),
+          Padding(
+            padding: const EdgeInsets.all(0),
+            child: SingleChildScrollView(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.8,
+                height: 1000,
+                color: Colors.transparent,
+                //flex: 4,
+                child: Stack(
+                  children: [
+                    Column(
+                      children: [
+                        Center(
+                          child: BodyText(),
                         ),
-                        SizedBox(
-                          height: 20,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'images/moto.jpg',
+                              ),
+                            ),
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'images/moto.jpg',
+                              ),
+                            ),
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'images/moto.jpg',
+                              ),
+                            ),
+                          ],
                         ),
-                        Text(
-                          'Estudante de Ciências da Computação - 5/8',
-                          style: TextStyle(
-                            color: Colors.blue,
-                            fontFamily: 'stjedise',
-                            fontSize: 26,
-                          ),
+                        Row(
+                          children: [
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'images/moto.jpg',
+                              ),
+                            ),
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'images/moto.jpg',
+                              ),
+                            ),
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'images/moto.jpg',
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'images/moto.jpg',
+                              ),
+                            ),
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'images/moto.jpg',
+                              ),
+                            ),
+                            Container(
+                              height: 200,
+                              width: 300,
+                              child: Image.asset(
+                                'images/moto.jpg',
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ),
+                    BackgroundBubble(),
+                  ],
                 ),
-                const BackgroundBubble(),
-              ],
+              ),
             ),
           ),
         ],

@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<void> playAudio() async {
     setState(() async {
       await assetsAudioPlayer.open(
-        Audio.file("assets/audio/starwars.mp3"),
+        Audio.file('assets/audio/starwars.mp3'),
       );
       await assetsAudioPlayer.play();
     });
@@ -30,13 +30,14 @@ class _SplashScreenState extends State<SplashScreen> {
     return SplashScreenView(
       home: HomeScreen(),
       duration: 4000,
-      text: "a long time ago in a galaxy far far away...",
+      text: 'a long time ago in a galaxy far far away...',
       textType: TextType.ScaleAnimatedText,
       textStyle: const TextStyle(
         fontSize: 40.0,
         color: Colors.yellow,
       ),
       backgroundColor: Colors.black,
+      imageSrc: '',
     );
   }
 }
