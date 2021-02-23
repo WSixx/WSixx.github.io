@@ -11,17 +11,17 @@ class ImageModal extends StatefulWidget {
 class _ImageModalState extends State<ImageModal> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 70.0),
-      child: SafeArea(
+    return SafeArea(
+      child: Padding(
+        padding: EdgeInsets.only(top: 60.0),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           body: Padding(
-            padding: const EdgeInsets.only(
+            padding: EdgeInsets.only(
               top: 20,
               left: 10,
               right: 10,
-              //bottom: 10 + MediaQuery.of(context).viewInsets.bottom,
+              bottom: 10 + MediaQuery.of(context).viewInsets.bottom,
             ),
             child: Column(
               children: [
@@ -59,7 +59,7 @@ class _ImageModalState extends State<ImageModal> {
                   ],
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                   width: 120,
                   child: ElevatedButton(
                     onPressed: () async {
