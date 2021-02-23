@@ -1,9 +1,23 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ImageModal extends StatefulWidget {
+  final String print1;
+  final String print2;
+  final String print3;
+  final String print4;
+  final String linkGit;
+
+  const ImageModal({
+    Key key,
+    this.print1,
+    this.print2,
+    this.print3,
+    this.print4,
+    this.linkGit,
+  }) : super(key: key);
+
   @override
   _ImageModalState createState() => _ImageModalState();
 }
@@ -32,30 +46,36 @@ class _ImageModalState extends State<ImageModal> {
                       width: 300,
                       height: 500,
                       child: Image.asset(
-                        'assets/images/meals/print1.png',
+                        widget.print1,
                       ),
                     ),
                     Container(
                       width: 300,
                       height: 500,
                       child: Image.asset(
-                        'assets/images/meals/print5.png',
+                        widget.print2,
                       ),
                     ),
                     Container(
                       width: 300,
                       height: 500,
                       child: Image.asset(
-                        'assets/images/meals/print3.png',
+                        widget.print3,
                       ),
                     ),
-                    Container(
-                      width: 300,
-                      height: 500,
-                      child: Image.asset(
-                        'assets/images/meals/print4.png',
-                      ),
-                    ),
+                    widget.print4.isNotEmpty
+                        ? Container(
+                            width: 300,
+                            height: 500,
+                            child: Image.asset(
+                              widget.print4,
+                            ),
+                          )
+                        : Container(
+                            width: 300,
+                            height: 500,
+                            color: Colors.red,
+                          ),
                   ],
                 ),
                 Container(
@@ -63,7 +83,7 @@ class _ImageModalState extends State<ImageModal> {
                   width: 120,
                   child: ElevatedButton(
                     onPressed: () async {
-                      await launch('https://github.com/WSixx/Meals-App');
+                      await launch(widget.linkGit);
                       Navigator.pop(context);
                     },
                     child: Row(

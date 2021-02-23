@@ -37,6 +37,7 @@ flutter:
     - assets/audio/
     - assets/images/
     - assets/images/meals/
+    - assets/images/conews/
 
   fonts:
     - family: Bebas Neue

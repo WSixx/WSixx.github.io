@@ -27,13 +27,26 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void _openTransactionFormModal(BuildContext context) {
+  void _openTransactionFormModal({
+    BuildContext context,
+    String print1,
+    String print2,
+    String print3,
+    String print4,
+    String linkGit,
+  }) {
     showModalBottomSheet(
         backgroundColor: Colors.transparent,
         isScrollControlled: true,
         context: context,
         builder: (_) {
-          return ImageModal();
+          return ImageModal(
+            linkGit: linkGit,
+            print1: print1,
+            print2: print2,
+            print3: print3,
+            print4: print4,
+          );
         });
   }
 
@@ -96,7 +109,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             onTap: () {
-                              _openTransactionFormModal(context);
+                              _openTransactionFormModal(
+                                context: context,
+                                linkGit: 'https://github.com/WSixx/Meals-App',
+                                print1: 'assets/images/meals/print1.png',
+                                print2: 'assets/images/meals/print5.png',
+                                print3: 'assets/images/meals/print3.png',
+                                print4: 'assets/images/meals/print4.png',
+                              );
                             },
                             onHover: (isHovering) {
                               if (isHovering) {
@@ -105,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               }
                             },
                           ),
-                          GestureDetector(
+                          InkWell(
                             child: Padding(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 25.0),
@@ -117,16 +137,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Carousel(
                                   images: [
                                     Image.asset(
-                                      'assets/images/meals/print1.png',
+                                      'assets/images/conews/print1.png',
                                     ),
                                     Image.asset(
-                                      'assets/images/meals/print5.png',
+                                      'assets/images/conews/print2.png',
                                     ),
                                     Image.asset(
-                                      'assets/images/meals/print3.png',
-                                    ),
-                                    Image.asset(
-                                      'assets/images/meals/print4.png',
+                                      'assets/images/conews/print3.png',
                                     ),
                                   ],
                                   dotSize: 4.0,
@@ -139,12 +156,21 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                             onTap: () {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content:
-                                      const Text('A SnackBar has been shown.'),
-                                ),
+                              _openTransactionFormModal(
+                                context: context,
+                                linkGit:
+                                    'https://github.com/WSixx/conews_flutter',
+                                print1: 'assets/images/conews/print1.png',
+                                print2: 'assets/images/conews/print2.png',
+                                print3: 'assets/images/conews/print3.png',
+                                print4: '',
                               );
+                            },
+                            onHover: (isHovering) {
+                              if (isHovering) {
+                              } else {
+                                //The mouse is no longer hovering.
+                              }
                             },
                           ),
                           GestureDetector(
