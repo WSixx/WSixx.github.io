@@ -71,10 +71,7 @@ class _ImageModalState extends State<ImageModal> {
                               widget.print4,
                             ),
                           )
-                        : Container(
-                            width: 300,
-                            height: 500,
-                          ),
+                        : Container(),
                   ],
                 ),
                 Container(

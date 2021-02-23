@@ -1,11 +1,11 @@
 {
-    "name": "my_portifolio",
-    "short_name": "my_portifolio",
+    "name": "Lucas Goncalves Portfólio",
+    "short_name": "Luca G Portfólio",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "my portifolio",
+    "description": "Portfólio de Lucas Goncalves",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
