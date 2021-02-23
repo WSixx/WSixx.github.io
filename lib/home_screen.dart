@@ -1,11 +1,12 @@
 import 'dart:async';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:carousel_pro/carousel_pro.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_portifolio/body_text.dart';
 import 'package:my_portifolio/left_menu.dart';
+import 'package:my_portifolio/image_modal.dart';
 import 'package:my_portifolio/widgets/background_bubble.dart';
+import 'dart:html' as html;
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -24,6 +25,16 @@ class _HomeScreenState extends State<HomeScreen> {
         );
       },
     );
+  }
+
+  void _openTransactionFormModal(BuildContext context) {
+    showModalBottomSheet(
+        backgroundColor: Colors.transparent,
+        isScrollControlled: true,
+        context: context,
+        builder: (_) {
+          return ImageModal();
+        });
   }
 
   @override
@@ -49,24 +60,73 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: BodyText(),
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          GestureDetector(
+                          InkWell(
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: SizedBox(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 25.0),
+                              child: Container(
+                                color: Colors.white12.withOpacity(0.5),
                                 key: UniqueKey(),
-                                height: 200.0,
-                                width: 350.0,
+                                height: 350.0,
+                                width: 220.0,
                                 child: Carousel(
                                   images: [
                                     Image.asset(
-                                      'assets/images/moto.jpg',
+                                      'assets/images/meals/print1.png',
                                     ),
                                     Image.asset(
-                                      'assets/images/moto.jpg',
+                                      'assets/images/meals/print5.png',
                                     ),
                                     Image.asset(
-                                      'assets/images/moto.jpg',
+                                      'assets/images/meals/print3.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print4.png',
+                                    ),
+                                  ],
+                                  dotSize: 4.0,
+                                  dotSpacing: 15.0,
+                                  dotColor: Colors.lightGreenAccent,
+                                  indicatorBgPadding: 5.0,
+                                  dotBgColor: Colors.blue.withOpacity(0.5),
+                                  borderRadius: true,
+                                ),
+                              ),
+                            ),
+                            onTap: () {
+                              _openTransactionFormModal(context);
+                            },
+                            onHover: (isHovering) {
+                              if (isHovering) {
+                              } else {
+                                //The mouse is no longer hovering.
+                              }
+                            },
+                          ),
+                          GestureDetector(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 25.0),
+                              child: Container(
+                                color: Colors.white12.withOpacity(0.5),
+                                key: UniqueKey(),
+                                height: 350.0,
+                                width: 220.0,
+                                child: Carousel(
+                                  images: [
+                                    Image.asset(
+                                      'assets/images/meals/print1.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print5.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print3.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print4.png',
                                     ),
                                   ],
                                   dotSize: 4.0,
@@ -87,135 +147,188 @@ class _HomeScreenState extends State<HomeScreen> {
                               );
                             },
                           ),
-                          SizedBox(
-                            height: 200.0,
-                            width: 350.0,
-                            child: Carousel(
-                              images: [
-                                Image.asset(
-                                  'assets/images/moto.jpg',
+                          GestureDetector(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 25.0),
+                              child: Container(
+                                color: Colors.white12.withOpacity(0.5),
+                                key: UniqueKey(),
+                                height: 350.0,
+                                width: 220.0,
+                                child: Carousel(
+                                  images: [
+                                    Image.asset(
+                                      'assets/images/meals/print1.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print5.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print3.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print4.png',
+                                    ),
+                                  ],
+                                  dotSize: 4.0,
+                                  dotSpacing: 15.0,
+                                  dotColor: Colors.lightGreenAccent,
+                                  indicatorBgPadding: 5.0,
+                                  dotBgColor: Colors.blue.withOpacity(0.5),
+                                  borderRadius: true,
                                 ),
-                                Image.asset(
-                                  'assets/images/moto.jpg',
-                                ),
-                                Image.asset(
-                                  'assets/images/moto.jpg',
-                                ),
-                              ],
-                              dotSize: 4.0,
-                              dotSpacing: 15.0,
-                              dotColor: Colors.lightGreenAccent,
-                              indicatorBgPadding: 5.0,
-                              dotBgColor: Colors.blue.withOpacity(0.5),
-                              borderRadius: true,
+                              ),
                             ),
-                          ),
-                          SizedBox(
-                            height: 200.0,
-                            width: 350.0,
-                            child: Carousel(
-                              images: [
-                                Image.asset(
-                                  'assets/images/moto.jpg',
+                            onTap: () {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content:
+                                      const Text('A SnackBar has been shown.'),
                                 ),
-                                Image.asset(
-                                  'assets/images/moto.jpg',
-                                ),
-                                Image.asset(
-                                  'assets/images/moto.jpg',
-                                ),
-                                ExactAssetImage('assets/images/moto.jpg'),
-                              ],
-                              dotSize: 4.0,
-                              dotSpacing: 15.0,
-                              dotColor: Colors.lightGreenAccent,
-                              indicatorBgPadding: 5.0,
-                              dotBgColor: Colors.blue.withOpacity(0.5),
-                              borderRadius: false,
-                              moveIndicatorFromBottom: 180.0,
-                              noRadiusForIndicator: true,
-                              overlayShadow: true,
-                              overlayShadowColors: Colors.white,
-                              overlayShadowSize: 0.7,
-                            ),
+                              );
+                            },
                           ),
                         ],
+                      ),
+                      SizedBox(
+                        height: 30,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
-                            height: 200,
-                            width: 300,
-                            child: Image.network(
-                                'http://via.placeholder.com/350x150'),
-                          ),
-                          Container(
-                            height: 200,
-                            width: 300,
-                            child: Image.asset(
-                              'assets/images/moto.jpg',
+                          GestureDetector(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 25.0),
+                              child: Container(
+                                color: Colors.white12.withOpacity(0.5),
+                                key: UniqueKey(),
+                                height: 350.0,
+                                width: 220.0,
+                                child: Carousel(
+                                  images: [
+                                    Image.asset(
+                                      'assets/images/meals/print1.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print5.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print3.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print4.png',
+                                    ),
+                                  ],
+                                  dotSize: 4.0,
+                                  dotSpacing: 15.0,
+                                  dotColor: Colors.lightGreenAccent,
+                                  indicatorBgPadding: 5.0,
+                                  dotBgColor: Colors.blue.withOpacity(0.5),
+                                  borderRadius: true,
+                                ),
+                              ),
                             ),
+                            onTap: () {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content:
+                                      const Text('A SnackBar has been shown.'),
+                                ),
+                              );
+                            },
                           ),
-                          Container(
-                            height: 200,
-                            width: 300,
-                            child: Image.asset(
-                              'assets/images/moto.jpg',
+                          GestureDetector(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 25.0),
+                              child: Container(
+                                color: Colors.white12.withOpacity(0.5),
+                                key: UniqueKey(),
+                                height: 350.0,
+                                width: 220.0,
+                                child: Carousel(
+                                  images: [
+                                    Image.asset(
+                                      'assets/images/meals/print1.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print5.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print3.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print4.png',
+                                    ),
+                                  ],
+                                  dotSize: 4.0,
+                                  dotSpacing: 15.0,
+                                  dotColor: Colors.lightGreenAccent,
+                                  indicatorBgPadding: 5.0,
+                                  dotBgColor: Colors.blue.withOpacity(0.5),
+                                  borderRadius: true,
+                                ),
+                              ),
                             ),
+                            onTap: () {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content:
+                                      const Text('A SnackBar has been shown.'),
+                                ),
+                              );
+                            },
+                          ),
+                          GestureDetector(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 25.0),
+                              child: Container(
+                                color: Colors.white12.withOpacity(0.5),
+                                key: UniqueKey(),
+                                height: 350.0,
+                                width: 220.0,
+                                child: Carousel(
+                                  images: [
+                                    Image.asset(
+                                      'assets/images/meals/print1.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print5.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print3.png',
+                                    ),
+                                    Image.asset(
+                                      'assets/images/meals/print4.png',
+                                    ),
+                                  ],
+                                  dotSize: 4.0,
+                                  dotSpacing: 15.0,
+                                  dotColor: Colors.lightGreenAccent,
+                                  indicatorBgPadding: 5.0,
+                                  dotBgColor: Colors.blue.withOpacity(0.5),
+                                  borderRadius: true,
+                                ),
+                              ),
+                            ),
+                            onTap: () {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content:
+                                      const Text('A SnackBar has been shown.'),
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            height: 200,
-                            width: 300,
-                            child: Image.asset(
-                              'assets/images/moto.jpg',
-                            ),
-                          ),
-                          Container(
-                            height: 200,
-                            width: 300,
-                            child: Image.asset(
-                              'assets/images/moto.jpg',
-                            ),
-                          ),
-                          Container(
-                            height: 200,
-                            width: 300,
-                            child: Image.asset(
-                              'assets/images/moto.jpg',
-                            ),
-                          ),
-                        ],
+                      SizedBox(
+                        height: 30,
                       ),
-                      Row(
-                        children: [
-                          Container(
-                            height: 200,
-                            width: 300,
-                            child: Image.asset(
-                              'assets/images/moto.jpg',
-                            ),
-                          ),
-                          Container(
-                            height: 200,
-                            width: 300,
-                            child: Image.asset(
-                              'assets/images/moto.jpg',
-                            ),
-                          ),
-                          Container(
-                            height: 200,
-                            width: 300,
-                            child: Image.asset(
-                              'assets/images/moto.jpg',
-                            ),
-                          ),
-                        ],
-                      ),
+                      Text('Lucas Silva Gonçalves'),
                     ],
                   ),
                 ),
