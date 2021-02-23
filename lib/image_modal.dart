@@ -74,7 +74,6 @@ class _ImageModalState extends State<ImageModal> {
                         : Container(
                             width: 300,
                             height: 500,
-                            color: Colors.red,
                           ),
                   ],
                 ),
