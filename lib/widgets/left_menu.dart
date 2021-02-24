@@ -2,17 +2,25 @@ import 'package:animated_widgets/widgets/rotation_animated.dart';
 import 'package:animated_widgets/widgets/shake_animated_widget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portifolio/change_widget.dart';
 import 'package:my_portifolio/widgets/shake.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LeftMenu extends StatefulWidget {
+  final ChangeWidget cartModel;
+
+  const LeftMenu({Key key, this.cartModel}) : super(key: key);
   @override
   _LeftMenuState createState() => _LeftMenuState();
 }
 
 class _LeftMenuState extends State<LeftMenu> {
   bool _enabled = false;
+  bool page = false;
   void startTimer() {
     Future<void>.delayed(const Duration(seconds: 2), () {
       setState(() {
@@ -23,6 +31,7 @@ class _LeftMenuState extends State<LeftMenu> {
 
   @override
   Widget build(BuildContext context) {
+    var updateWidget = Provider.of<ChangeWidget>(context);
     return Container(
       width: MediaQuery.of(context).size.width * 0.2,
       child: Container(
@@ -66,26 +75,15 @@ class _LeftMenuState extends State<LeftMenu> {
                 ShakeWidget(
                   duration: const Duration(seconds: 2),
                   child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'HOME',
-                      style: Theme.of(context).textTheme.headline6,
-                      textAlign: TextAlign.start,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                ShakeWidget(
-                  duration: const Duration(seconds: 2),
-                  child: TextButton(
                     onPressed: () {
-                      setState(() {});
+                      setState(() {
+                        updateWidget.add();
+                      });
                     },
                     child: Text(
-                      'ABOUT',
+                      updateWidget.page ? 'HOME' : 'About',
                       style: Theme.of(context).textTheme.headline6,
+                      textAlign: TextAlign.start,
                     ),
                   ),
                 ),
@@ -111,6 +109,18 @@ class _LeftMenuState extends State<LeftMenu> {
                       color: Colors.white,
                       onPressed: () async {
                         await launch('https://github.com/WSixx');
+                      },
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    IconButton(
+                      tooltip: 'Curriculo',
+                      icon: const Icon(FontAwesomeIcons.solidFileWord),
+                      color: Colors.white,
+                      onPressed: () async {
+                        await launch(
+                            'https://drive.google.com/file/d/1dO_AGGrYSwyF2Uf2EBRyqt5dyGsb72Pq/view');
                       },
                     ),
                   ],
