@@ -44,7 +44,7 @@ class _ImageModalState extends State<ImageModal> {
                   children: [
                     Container(
                       width: 300,
-                      height: 500,
+                      height: 512,
                       child: Image.asset(
                         widget.print1,
                       ),

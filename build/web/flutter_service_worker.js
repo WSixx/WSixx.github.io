@@ -3,11 +3,14 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "beb5adda0768663f056095cd9c0b49b9",
+  "assets/AssetManifest.json": "56abab15ee99f8072c11aeddd5ba3787",
 "assets/assets/audio/starwars.mp3": "92ed57e2f6635e6a87534c86bc57cdf6",
 "assets/assets/images/conews/print1.png": "d6c39fbc2eab99271c9d2a277bbe232f",
 "assets/assets/images/conews/print2.png": "1732d57e07f9441adb5ed592c309d985",
 "assets/assets/images/conews/print3.png": "5183ffcbec2bc97624abed18ebe3863f",
+"assets/assets/images/despesas/print1.png": "483d3b059edd94a5ce5206a6852f5413",
+"assets/assets/images/despesas/print2.png": "9e7829ebc4bd9efb497b2d263fce52aa",
+"assets/assets/images/despesas/print3.png": "259c38c537b5f0639522ca76d29927f2",
 "assets/assets/images/meals/print1.png": "4d6044ad7b1119b68a87b1db29aab99b",
 "assets/assets/images/meals/print3.png": "f02d4da8c31df29322a73fe199371da0",
 "assets/assets/images/meals/print4.png": "5fdc32c375c2f2d1ab5f74a7b10b0b85",
@@ -27,9 +30,9 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "21dd4bcf1fc1a8523fbf436e5edc34a6",
-"/": "21dd4bcf1fc1a8523fbf436e5edc34a6",
-"main.dart.js": "bc7496c5aa2ac40d4f13d0b3a557394f",
+"index.html": "7a48bdfe70bd4abe2f9186174057a741",
+"/": "7a48bdfe70bd4abe2f9186174057a741",
+"main.dart.js": "627df8bba49dc2ae72c20ea0acfcb600",
 "manifest.json": "100ff8da1bb5f48ebf79fa91e8542907",
 "version.json": "3787bbda0523995cf94b6bc53d1df0f9"
 };

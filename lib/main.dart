@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_portifolio/home_screen.dart';
-import 'package:my_portifolio/splash_screen.dart';
+import 'file:///E:/flutter/my_portifolio/lib/screens/home_screen.dart';
+import 'file:///E:/flutter/my_portifolio/lib/screens/splash_screen.dart';
 import 'package:my_portifolio/utils/app_routes.dart';
 
 void main() {

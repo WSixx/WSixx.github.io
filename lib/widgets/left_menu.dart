@@ -96,7 +96,7 @@ class _LeftMenuState extends State<LeftMenu> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     IconButton(
-                      icon: Icon(FontAwesomeIcons.linkedin),
+                      icon: const Icon(FontAwesomeIcons.linkedin),
                       color: Colors.blue[800],
                       onPressed: () async {
                         await launch(
@@ -107,7 +107,7 @@ class _LeftMenuState extends State<LeftMenu> {
                       width: 8,
                     ),
                     IconButton(
-                      icon: Icon(FontAwesomeIcons.github),
+                      icon: const Icon(FontAwesomeIcons.github),
                       color: Colors.white,
                       onPressed: () async {
                         await launch('https://github.com/WSixx');
