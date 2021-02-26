@@ -64,12 +64,12 @@ class BodyText extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            const Text(
+            Text(
               'Alguns Projetos:',
               style: TextStyle(
                 color: Colors.blue,
                 fontFamily: 'stjedise',
-                fontSize: 28,
+                fontSize: 28.ssp,
               ),
             ),
             const SizedBox(

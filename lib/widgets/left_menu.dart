@@ -102,6 +102,7 @@ class _LeftMenuState extends State<LeftMenu> {
                       child: Icon(
                         FontAwesomeIcons.linkedin,
                         color: Colors.blue[800],
+                        size: MediaQuery.of(context).size.aspectRatio * 20,
                       ),
                       onTap: () async {
                         await launch(
@@ -115,6 +116,7 @@ class _LeftMenuState extends State<LeftMenu> {
                       child: Icon(
                         FontAwesomeIcons.github,
                         color: Colors.white,
+                        size: MediaQuery.of(context).size.aspectRatio * 20,
                       ),
                       onTap: () async {
                         await launch('https://github.com/WSixx');
@@ -127,6 +129,7 @@ class _LeftMenuState extends State<LeftMenu> {
                       child: Icon(
                         FontAwesomeIcons.solidFileWord,
                         color: Colors.white,
+                        size: MediaQuery.of(context).size.aspectRatio * 20,
                       ),
                       onTap: () async {
                         await launch(
