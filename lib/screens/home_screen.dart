@@ -89,22 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   InkWell(
-                                    child: Container(
-                                      color: Colors.white12.withOpacity(0.5),
-                                      key: UniqueKey(),
-                                      height: 400.h,
-                                      width: 180.w,
-                                      // height: 350.0,
-                                      // width: 220.0,
-                                      child: MyCarousel(
-                                        print1:
-                                            'assets/images/meals/print1.png',
-                                        print2:
-                                            'assets/images/meals/print5.png',
-                                        print3:
-                                            'assets/images/meals/print3.png',
-                                      ),
-                                    ),
+                                    borderRadius: BorderRadius.circular(12),
                                     onTap: () {
                                       _openTransactionFormModal(
                                         context: context,
@@ -116,8 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             'assets/images/meals/print5.png',
                                         print3:
                                             'assets/images/meals/print3.png',
-                                        print4:
-                                            'assets/images/meals/print4.png',
+                                        print4: '',
                                       );
                                     },
                                     onHover: (isHovering) {
@@ -126,11 +110,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                         //The mouse is no longer hovering.
                                       }
                                     },
+                                    child: Container(
+                                      height: 400.h,
+                                      width: 180.w,
+                                      child: MyCarousel(
+                                        print1:
+                                            'assets/images/meals/print1.png',
+                                        print2:
+                                            'assets/images/meals/print5.png',
+                                        print3:
+                                            'assets/images/meals/print3.png',
+                                      ),
+                                    ),
                                   ),
                                   InkWell(
+                                    borderRadius: BorderRadius.circular(12),
                                     child: Container(
-                                      color: Colors.white12.withOpacity(0.5),
-                                      key: UniqueKey(),
                                       height: 400.h,
                                       width: 180.w,
                                       child: MyCarousel(
@@ -164,9 +159,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     },
                                   ),
                                   InkWell(
+                                    borderRadius: BorderRadius.circular(12),
                                     child: Container(
-                                      color: Colors.white12.withOpacity(0.5),
-                                      key: UniqueKey(),
                                       height: 400.h,
                                       width: 180.w,
                                       child: MyCarousel(

@@ -69,7 +69,7 @@ class BodyText extends StatelessWidget {
               style: TextStyle(
                 color: Colors.blue,
                 fontFamily: 'stjedise',
-                fontSize: 28.ssp,
+                fontSize: 32.ssp,
               ),
             ),
             const SizedBox(

@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
             fontFamily: 'Savings Bond Shadow',
             textTheme: ThemeData.light().textTheme.copyWith(
                   headline6: TextStyle(
-                    fontSize: 34.ssp,
+                    fontSize: 38.ssp,
                     fontFamily: 'Bebas Neue',
                     color: Color(0xff03016e),
                   ),

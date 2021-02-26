@@ -55,17 +55,30 @@ class _LeftMenuState extends State<LeftMenu> {
                   });
                 },
                 child: Container(
+                  //width: 100.w,
+                  //height: 100.h,
+                  padding: const EdgeInsets.all(30),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(200.0),
+                    child: Image.network(
+                      'https://avatars.githubusercontent.com/u/54176892?s=460&u=4b0b4625a64dec5178064bb8ce62f95ea89d664e&v=4',
+                      //width: 200.w,
+                      //height: 200.h,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ), /*Container(
                   padding: const EdgeInsets.all(20),
-                  width: 200,
-                  height: 200,
+                  width: 200.w,
+                  height: 200.h,
                   child: CircleAvatar(
                     radius: 30,
                     backgroundColor: Colors.black,
                     backgroundImage: CachedNetworkImageProvider(
-                      'https://avatars.githubusercontent.com/u/54176892?s=460&u=4b0b4625a64dec5178064bb8ce62f95ea89d664e&v=4',
-                    ),
+                        'https://avatars.githubusercontent.com/u/54176892?s=460&u=4b0b4625a64dec5178064bb8ce62f95ea89d664e&v=4',
+                        scale: 2 / 3),
                   ),
-                ),
+                ),*/
               ),
             ),
             const SizedBox(
@@ -82,7 +95,7 @@ class _LeftMenuState extends State<LeftMenu> {
                 child: Text(
                   updateWidget.page ? 'HOME' : 'About',
                   style: Theme.of(context).textTheme.headline6,
-                  textAlign: TextAlign.start,
+                  //textAlign: TextAlign.start,
                 ),
               ),
             ),
