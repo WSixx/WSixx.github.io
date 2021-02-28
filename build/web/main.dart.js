@@ -59276,7 +59276,7 @@ $1:function(a){return new O.hn(new P.aY(t.V))},
 $S:380}
 F.Vm.prototype={
 $0:function(){var s=4278387054,r=null,q=X.aau(r,"Savings Bond Shadow",new P.D(s),X.aau(C.ac,r,r,r).a8.a2_(A.fa(r,r,new P.D(s),r,r,r,r,r,"Bebas Neue",r,r,$.e3.fh(38,!0),r,r,r,r,!0,r,r,r,r,r,r)))
-return new S.lM(P.az(["/home-screen",new F.Vi(),"/",new F.Vj(),"/about-screen",new F.Vk()],t.R,t.sy),"/","Lucas Gon\xe7alves Portif\xf3lio",q,!1,r)},
+return new S.lM(P.az(["/home-screen",new F.Vi(),"/",new F.Vj(),"/about-screen",new F.Vk()],t.R,t.sy),"/","Lucas Gon\xe7alves Portf\xf3lio",q,!1,r)},
 $C:"$0",
 $R:0,
 $S:381}
@@ -59292,12 +59292,12 @@ $S:384}
 T.kW.prototype={
 K:function(a,b){return new B.iT(new T.O6(b),new P.R(1280,720),!0,null)}}
 T.O6.prototype={
-$0:function(){var s,r,q,p=null,o="stjedise",n=this.a,m=t.w,l=n.U(m).f,k=n.U(m).f,j=L.ez("Forma\xe7\xe3o:",p,A.fa(p,p,C.bm,p,p,p,p,p,o,p,p,$.e3.fh(32,!0),p,p,p,p,!0,p,p,p,p,p,p),p),i=n.U(m).f,h=n.U(m).f.a,g=t.c
-i=M.bE(p,T.km(H.c([L.jU(C.qo,C.j,h.ghJ(h)*20),T.vG(p,p,15),O.YB("Ci\xeancia da Computa\xe7\xe3o (2019 - 12/2022) -  Unip",K.aQ(n).a8.f.jV(C.j,$.e3.fh(26,!0)),p)],g),C.ab,C.aH,p),p,p,p,p,C.ma,p,i.a.a*0.6)
+$0:function(){var s,r,q,p=null,o="stjedise",n=this.a,m=t.w,l=n.U(m).f,k=n.U(m).f,j=L.ez("Education:",p,A.fa(p,p,C.bm,p,p,p,p,p,o,p,p,$.e3.fh(32,!0),p,p,p,p,!0,p,p,p,p,p,p),p),i=n.U(m).f,h=n.U(m).f.a,g=t.c
+i=M.bE(p,T.km(H.c([L.jU(C.qo,C.j,h.ghJ(h)*20),T.vG(p,p,15),O.YB("Bachelor's Degree in Computer Science (2019 - 12/2022) - Unip",K.aQ(n).a8.f.jV(C.j,$.e3.fh(26,!0)),p)],g),C.ab,C.aH,p),p,p,p,p,C.ma,p,i.a.a*0.6)
 h=n.U(m).f
 s=n.U(m).f.a
 h=M.bE(p,T.km(H.c([L.jU(C.qo,C.j,s.ghJ(s)*20),C.oq,O.YB("T\xe9cnico em Inform\xe1tica (2014) - ETEC Arist\xf3teles Ferreira",K.aQ(n).a8.f.jV(C.j,$.e3.fh(26,!0)),p)],g),C.ab,C.aH,p),p,p,p,p,C.ma,p,h.a.a*0.6)
-s=L.ez("Contato:",p,A.fa(p,p,C.bm,p,p,p,p,p,o,p,p,$.e3.fh(32,!0),p,p,p,p,!0,p,p,p,p,p,p),p)
+s=L.ez("Contact:",p,A.fa(p,p,C.bm,p,p,p,p,p,o,p,p,$.e3.fh(32,!0),p,p,p,p,!0,p,p,p,p,p,p),p)
 r=n.U(m).f
 q=n.U(m).f.a
 q=T.km(H.c([L.jU(C.qp,C.j,q.ghJ(q)*20),C.oq,O.YB("lucas.2007s@gmail.com",K.aQ(n).a8.f.jV(C.j,$.e3.fh(26,!0)),C.ak)],g),C.ab,C.aH,p)
@@ -59384,12 +59384,12 @@ F.A4.prototype={
 K:function(a,b){return new B.iT(new F.OP(b),new P.R(1280,720),!0,null)}}
 F.OP.prototype={
 $0:function(){var s,r=null,q="stjedise",p=this.a,o=t.w,n=p.U(o).f
-n=M.bE(r,T.ih(L.ez("ol\xe1, sou Lucas Gon\xe7alves!",r,A.fa(r,r,C.bm,r,r,r,r,r,q,r,r,$.e3.fh(37,!0),r,r,r,r,!0,r,r,r,r,r,r),r),r,r),r,r,r,r,r,r,n.a.a*0.5)
+n=M.bE(r,T.ih(L.ez("Hi, i am Lucas Gon\xe7alves!",r,A.fa(r,r,C.bm,r,r,r,r,r,q,r,r,$.e3.fh(37,!0),r,r,r,r,!0,r,r,r,r,r,r),r),r,r),r,r,r,r,r,r,n.a.a*0.5)
 s=p.U(o).f
-s=M.bE(r,T.ih(L.ez("Sobre Mim:",r,A.fa(r,r,C.bm,r,r,r,r,r,q,r,r,$.e3.fh(32,!0),r,r,r,r,!0,r,r,r,r,r,r),r),r,r),r,r,r,r,r,r,s.a.a*0.5)
+s=M.bE(r,T.ih(L.ez("About Me:",r,A.fa(r,r,C.bm,r,r,r,r,r,q,r,r,$.e3.fh(32,!0),r,r,r,r,!0,r,r,r,r,r,r),r),r,r),r,r,r,r,r,r,s.a.a*0.5)
 o=p.U(o).f
-p=H.c([new Q.eC("Ol\xe1, sou um apaixonado por t\xe9cnologia, atualmente cursando o 5\xb0 semestre de Ci\xeancia da Computa\xe7\xe3o, estou em busca de uma oportunidade. Gosto de aprender e sou fascinado por novas tecnologias, programar para mim virou um hobby que adoro para passar o tempo. Gosto de ler e assistir filme dos mais diversos.",r,K.aQ(p).a8.f.jV(C.j,$.e3.fh(28,!0)))],t.cn)
-return new T.cL(C.x1,T.nA(H.c([n,C.tx,s,M.bE(r,new O.p_(r,new Q.eC(r,p,r),r,r,C.tQ,r),r,r,r,r,new V.aK(12,12,12,12),r,o.a.a*0.6),C.ty,L.ez("Alguns Projetos:",r,A.fa(r,r,C.bm,r,r,r,r,r,q,r,r,$.e3.fh(32,!0),r,r,r,r,!0,r,r,r,r,r,r),r),C.tz],t.c),C.ab,C.aH,C.bW),r)},
+p=H.c([new Q.eC("Hello, I am passionate about technology, currently studying the 5th semester of Computer Science, I am looking for an opportunity. I like to learn and I am fascinated by new technologies, programming for me has become a hobby that I love to spend time. I like to read and watch a wide variety of films.",r,K.aQ(p).a8.f.jV(C.j,$.e3.fh(28,!0)))],t.cn)
+return new T.cL(C.x1,T.nA(H.c([n,C.tx,s,M.bE(r,new O.p_(r,new Q.eC(r,p,r),r,r,C.tQ,r),r,r,r,r,new V.aK(12,12,12,12),r,o.a.a*0.6),C.ty,L.ez("Some of my Projects:",r,A.fa(r,r,C.bm,r,r,r,r,r,q,r,r,$.e3.fh(32,!0),r,r,r,r,!0,r,r,r,r,r,r),r),C.tz],t.c),C.ab,C.aH,C.bW),r)},
 $C:"$0",
 $R:0,
 $S:129}

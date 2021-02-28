@@ -18,7 +18,7 @@ class AboutScreen extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  'Formação:',
+                  'Education:',
                   style: TextStyle(
                     color: Colors.blue,
                     fontFamily: 'stjedise',
@@ -42,7 +42,7 @@ class AboutScreen extends StatelessWidget {
                         width: 15,
                       ),
                       SelectableText(
-                        'Ciência da Computação (2019 - 12/2022) -  Unip',
+                        "Bachelor's Degree in Computer Science (2019 - 12/2022) - Unip",
                         style: Theme.of(context)
                             .textTheme
                             .headline6
@@ -75,7 +75,7 @@ class AboutScreen extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Contato:',
+                  'Contact:',
                   style: TextStyle(
                     color: Colors.blue,
                     fontFamily: 'stjedise',

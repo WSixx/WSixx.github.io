@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         designSize: Size(1280, 720),
         allowFontScaling: true,
         builder: () => MaterialApp(
-          title: 'Lucas Gonçalves Portifólio',
+          title: 'Lucas Gonçalves Portfólio',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             primaryColor: Color(0xff03016e),

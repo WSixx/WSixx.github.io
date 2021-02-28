@@ -16,7 +16,7 @@ class BodyText extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.5,
               child: Center(
                 child: Text(
-                  'olá, sou Lucas Gonçalves!',
+                  'Hi, i am Lucas Gonçalves!',
                   style: TextStyle(
                     color: Colors.blue,
                     fontFamily: 'stjedise',
@@ -32,7 +32,7 @@ class BodyText extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.5,
               child: Center(
                 child: Text(
-                  'Sobre Mim:',
+                  'About Me:',
                   style: TextStyle(
                     color: Colors.blue,
                     fontFamily: 'stjedise',
@@ -49,9 +49,9 @@ class BodyText extends StatelessWidget {
                   children: [
                     TextSpan(
                       text:
-                          'Olá, sou um apaixonado por técnologia, atualmente cursando o 5° semestre de Ciência da Computação, estou em busca de uma oportunidade. '
-                          'Gosto de aprender e sou fascinado por novas tecnologias, programar para mim virou um hobby que adoro para passar o tempo.'
-                          ' Gosto de ler e assistir filme dos mais diversos.',
+                          'Hello, I am passionate about technology, currently studying the 5th semester of Computer Science, I am looking for an opportunity. '
+                          'I like to learn and I am fascinated by new technologies, programming for me has become a hobby that I love to spend time.'
+                          ' I like to read and watch a wide variety of films.',
                       style: Theme.of(context)
                           .textTheme
                           .headline6
@@ -65,7 +65,7 @@ class BodyText extends StatelessWidget {
               height: 25,
             ),
             Text(
-              'Alguns Projetos:',
+              'Some of my Projects:',
               style: TextStyle(
                 color: Colors.blue,
                 fontFamily: 'stjedise',
