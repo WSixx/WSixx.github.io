@@ -146,7 +146,7 @@ class _LeftMenuState extends State<LeftMenu> {
                       ),
                       onTap: () async {
                         await launch(
-                            'https://drive.google.com/file/d/1dO_AGGrYSwyF2Uf2EBRyqt5dyGsb72Pq/view');
+                            'https://drive.google.com/drive/folders/1zdxe0cn_rP8UebGqyTpWqVsAcadwcdNZ?usp=sharing');
                       },
                     ),
                   ),

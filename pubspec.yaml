@@ -15,7 +15,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   simple_animations: ^2.5.1
   animated_widgets: ^1.0.6
-  assets_audio_player: ^2.0.13+8
+  assets_audio_player: ^2.0.14
   splash_screen_view: ^1.0.3
   cached_network_image: ^2.5.0
   font_awesome_flutter: ^8.11.0
