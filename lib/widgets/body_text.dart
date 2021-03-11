@@ -6,8 +6,7 @@ class BodyText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(1380, 720),
-      allowFontScaling: true,
+      designSize: Size(360, 690),
       builder: () => Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
@@ -17,11 +16,10 @@ class BodyText extends StatelessWidget {
               child: Center(
                 child: Text(
                   'Hi, i am Lucas Gonçalves!',
-                  textScaleFactor: 1.2,
                   style: TextStyle(
                     color: Colors.blue,
                     fontFamily: 'stjedise',
-                    fontSize: 37.ssp,
+                    fontSize: 15.ssp,
                   ),
                 ),
               ),
@@ -34,11 +32,10 @@ class BodyText extends StatelessWidget {
               child: Center(
                 child: Text(
                   'About Me:',
-                  textScaleFactor: 1.2,
                   style: TextStyle(
                     color: Colors.blue,
                     fontFamily: 'stjedise',
-                    fontSize: 32.ssp,
+                    fontSize: 13.ssp,
                   ),
                 ),
               ),
@@ -57,7 +54,7 @@ class BodyText extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .headline6
-                          .copyWith(color: Colors.white, fontSize: 32.ssp),
+                          .copyWith(color: Colors.white, fontSize: 12.ssp),
                     ),
                   ],
                 ),
@@ -68,11 +65,10 @@ class BodyText extends StatelessWidget {
             ),
             Text(
               'Some of my Projects:',
-              textScaleFactor: 1.5,
               style: TextStyle(
                 color: Colors.blue,
                 fontFamily: 'stjedise',
-                fontSize: 32.ssp,
+                fontSize: 13.ssp,
               ),
             ),
             const SizedBox(

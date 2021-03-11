@@ -1,6 +1,5 @@
 import 'package:animated_widgets/widgets/rotation_animated.dart';
 import 'package:animated_widgets/widgets/shake_animated_widget.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -67,18 +66,7 @@ class _LeftMenuState extends State<LeftMenu> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                ), /*Container(
-                  padding: const EdgeInsets.all(20),
-                  width: 200.w,
-                  height: 200.h,
-                  child: CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.black,
-                    backgroundImage: CachedNetworkImageProvider(
-                        'https://avatars.githubusercontent.com/u/54176892?s=460&u=4b0b4625a64dec5178064bb8ce62f95ea89d664e&v=4',
-                        scale: 2 / 3),
-                  ),
-                ),*/
+                ),
               ),
             ),
             const SizedBox(
@@ -112,42 +100,42 @@ class _LeftMenuState extends State<LeftMenu> {
                   Padding(
                     padding: const EdgeInsets.only(right: 10.0),
                     child: InkWell(
+                      onTap: () async {
+                        await launch(
+                            'https://www.linkedin.com/in/lucassgon%C3%A7alves/');
+                      },
                       child: Icon(
                         FontAwesomeIcons.linkedin,
                         color: Colors.blue[800],
                         size: MediaQuery.of(context).size.aspectRatio * 20,
                       ),
-                      onTap: () async {
-                        await launch(
-                            'https://www.linkedin.com/in/lucassgon%C3%A7alves/');
-                      },
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 10.0),
                     child: InkWell(
+                      onTap: () async {
+                        await launch('https://github.com/WSixx');
+                      },
                       child: Icon(
                         FontAwesomeIcons.github,
                         color: Colors.white,
                         size: MediaQuery.of(context).size.aspectRatio * 20,
                       ),
-                      onTap: () async {
-                        await launch('https://github.com/WSixx');
-                      },
                     ),
                   ),
                   Tooltip(
                     message: 'Curriculo',
                     child: InkWell(
+                      onTap: () async {
+                        await launch(
+                            'https://drive.google.com/drive/folders/1zdxe0cn_rP8UebGqyTpWqVsAcadwcdNZ?usp=sharing');
+                      },
                       child: Icon(
                         FontAwesomeIcons.solidFileWord,
                         color: Colors.white,
                         size: MediaQuery.of(context).size.aspectRatio * 20,
                       ),
-                      onTap: () async {
-                        await launch(
-                            'https://drive.google.com/drive/folders/1zdxe0cn_rP8UebGqyTpWqVsAcadwcdNZ?usp=sharing');
-                      },
                     ),
                   ),
                   /* IconButton(
