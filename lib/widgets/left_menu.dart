@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'file:///E:/flutter/my_portifolio/lib/utils/change_widget.dart';
+import 'package:my_portifolio/utils/change_widget.dart';
 import 'package:my_portifolio/widgets/shake.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LeftMenu extends StatefulWidget {
-  final ChangeWidget cartModel;
+  final ChangeWidget aboutOrHome;
 
-  const LeftMenu({Key key, this.cartModel}) : super(key: key);
+  const LeftMenu({Key key, this.aboutOrHome}) : super(key: key);
   @override
   _LeftMenuState createState() => _LeftMenuState();
 }

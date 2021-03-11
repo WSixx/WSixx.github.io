@@ -2,10 +2,10 @@ import 'dart:async';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'file:///E:/flutter/my_portifolio/lib/utils/responsive_widget.dart';
 import 'package:my_portifolio/screens/about_screen.dart';
-import 'file:///E:/flutter/my_portifolio/lib/utils/change_widget.dart';
 import 'package:my_portifolio/screens/small_screen_home.dart';
+import 'package:my_portifolio/utils/change_widget.dart';
+import 'package:my_portifolio/utils/responsive_widget.dart';
 import 'package:my_portifolio/widgets/background_bubble.dart';
 import 'package:my_portifolio/widgets/body_text.dart';
 import 'package:my_portifolio/widgets/image_modal.dart';
@@ -22,7 +22,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
   bool page = false;
-  ChangeWidget cartModel = ChangeWidget();
+  ChangeWidget aboutOrHome = ChangeWidget();
 
   Future<void> playAudio() async {
     await Future.delayed(
@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
           body: Row(
             children: [
               LeftMenu(
-                cartModel: cartModel,
+                aboutOrHome: aboutOrHome,
               ),
               !updateWidget.page
                   ? Padding(

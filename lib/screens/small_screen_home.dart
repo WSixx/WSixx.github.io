@@ -1,6 +1,3 @@
-import 'package:animated_widgets/widgets/rotation_animated.dart';
-import 'package:animated_widgets/widgets/shake_animated_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -132,7 +129,7 @@ class _SmallScreenHomeState extends State<SmallScreenHome> {
               height: 30,
             ),
             Container(
-              height: 612,
+              height: 912,
               child: Column(
                 children: [
                   Expanded(
@@ -180,7 +177,7 @@ class _SmallScreenHomeState extends State<SmallScreenHome> {
                                         size: MediaQuery.of(context)
                                                 .size
                                                 .aspectRatio *
-                                            80,
+                                            50,
                                       ),
                                     ),
                                   ),
@@ -191,6 +188,9 @@ class _SmallScreenHomeState extends State<SmallScreenHome> {
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(
+                    height: 25,
                   ),
                   Expanded(
                     child: Row(
@@ -237,7 +237,67 @@ class _SmallScreenHomeState extends State<SmallScreenHome> {
                                         size: MediaQuery.of(context)
                                                 .size
                                                 .aspectRatio *
-                                            80,
+                                            50,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 25,
+                  ),
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: Card(
+                            child: Image.asset(
+                              'assets/images/conews/doublePrint2.png',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.3,
+                          child: ListTile(
+                            title: Container(
+                              child: Text(
+                                'Covid News',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.white),
+                              ),
+                            ),
+                            subtitle: Container(
+                              padding: EdgeInsets.only(top: 15),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'App desenvolvido em Flutter para estudos de Navegação entre multiplas telas',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                    softWrap: true,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: InkWell(
+                                      onTap: () async {
+                                        await launch(
+                                            'https://github.com/WSixx');
+                                      },
+                                      child: Icon(
+                                        FontAwesomeIcons.github,
+                                        color: Colors.white,
+                                        size: MediaQuery.of(context)
+                                                .size
+                                                .aspectRatio *
+                                            50,
                                       ),
                                     ),
                                   ),
