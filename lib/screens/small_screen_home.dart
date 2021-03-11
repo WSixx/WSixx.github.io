@@ -135,128 +135,30 @@ class _SmallScreenHomeState extends State<SmallScreenHome> {
                 children: [
                   SmallScreenProjectsWidget(
                     imageAsset: 'assets/images/meals/doublePrint.png',
-                    prjTitle: '',
-                    prjDescription: '',
+                    prjTitle: 'Meals APP',
+                    prjDescription:
+                        'App developed in Flutter for navigation studies between multiple screens',
+                    prjgitLink: 'https://github.com/WSixx/Meals-App',
                   ),
                   SizedBox(
                     height: 25,
                   ),
-                  Expanded(
-                    child: Row(
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          child: Card(
-                            child: Image.asset(
-                              'assets/images/conews/doublePrint2.png',
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.3,
-                          child: ListTile(
-                            title: Container(
-                              child: Text(
-                                'Covid News',
-                                style: TextStyle(
-                                    fontSize: 20, color: Colors.white),
-                              ),
-                            ),
-                            subtitle: Container(
-                              padding: EdgeInsets.only(top: 15),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    'App desenvolvido em Flutter para estudos de Navegação entre multiplas telas',
-                                    style: TextStyle(
-                                        fontSize: 15, color: Colors.white),
-                                    softWrap: true,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(15.0),
-                                    child: InkWell(
-                                      onTap: () async {
-                                        await launch(
-                                            'https://github.com/WSixx');
-                                      },
-                                      child: Icon(
-                                        FontAwesomeIcons.github,
-                                        color: Colors.white,
-                                        size: MediaQuery.of(context)
-                                                .size
-                                                .aspectRatio *
-                                            50,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                  SmallScreenProjectsWidget(
+                    imageAsset: 'assets/images/conews/doublePrint2.png',
+                    prjTitle: 'Covid News',
+                    prjDescription:
+                        'You can see the data on COVID-19 updated daily. Data on recovered, infected and deaths. Data from more than 180 countries updated daily',
+                    prjgitLink: 'https://github.com/WSixx/conews_flutter',
                   ),
                   SizedBox(
                     height: 25,
                   ),
-                  Expanded(
-                    child: Row(
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          child: Card(
-                            child: Image.asset(
-                              'assets/images/conews/doublePrint2.png',
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.3,
-                          child: ListTile(
-                            title: Container(
-                              child: Text(
-                                'Covid News',
-                                style: TextStyle(
-                                    fontSize: 20, color: Colors.white),
-                              ),
-                            ),
-                            subtitle: Container(
-                              padding: EdgeInsets.only(top: 15),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    'App desenvolvido em Flutter para estudos de Navegação entre multiplas telas',
-                                    style: TextStyle(
-                                        fontSize: 15, color: Colors.white),
-                                    softWrap: true,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(15.0),
-                                    child: InkWell(
-                                      onTap: () async {
-                                        await launch(
-                                            'https://github.com/WSixx');
-                                      },
-                                      child: Icon(
-                                        FontAwesomeIcons.github,
-                                        color: Colors.white,
-                                        size: MediaQuery.of(context)
-                                                .size
-                                                .aspectRatio *
-                                            50,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                  SmallScreenProjectsWidget(
+                    imageAsset: 'assets/images/despesas/doublePrint3.png',
+                    prjTitle: 'Despesas Pessoais',
+                    prjDescription:
+                        'APP developed in Flutter, Personal Expenses for Studies',
+                    prjgitLink: 'https://github.com/WSixx/Despesas-Pessoais',
                   ),
                 ],
               ),

@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SmallScreenProjectsWidget extends StatelessWidget {
   final String imageAsset;
   final String prjTitle;
   final String prjDescription;
+  final String prjgitLink;
   const SmallScreenProjectsWidget(
-      {this.imageAsset, this.prjTitle, this.prjDescription});
+      {this.imageAsset, this.prjTitle, this.prjDescription, this.prjgitLink});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +29,7 @@ class SmallScreenProjectsWidget extends StatelessWidget {
             child: ListTile(
               title: Container(
                 child: Text(
-                  'Meals APP',
+                  prjTitle,
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
               ),
@@ -35,7 +38,7 @@ class SmallScreenProjectsWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'App desenvolvido em Flutter para estudos de Navegação entre multiplas telas',
+                      prjDescription,
                       style: TextStyle(fontSize: 15, color: Colors.white),
                       softWrap: true,
                     ),
@@ -43,7 +46,7 @@ class SmallScreenProjectsWidget extends StatelessWidget {
                       padding: const EdgeInsets.all(15.0),
                       child: InkWell(
                         onTap: () async {
-                          await launch('https://github.com/WSixx');
+                          await launch(prjgitLink);
                         },
                         child: Icon(
                           FontAwesomeIcons.github,
