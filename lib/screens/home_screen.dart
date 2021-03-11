@@ -2,8 +2,10 @@ import 'dart:async';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:my_portifolio/responsive_widget.dart';
 import 'package:my_portifolio/screens/about_screen.dart';
 import 'package:my_portifolio/change_widget.dart';
+import 'package:my_portifolio/screens/small_screen_home.dart';
 import 'package:my_portifolio/widgets/background_bubble.dart';
 import 'package:my_portifolio/widgets/body_text.dart';
 import 'package:my_portifolio/widgets/image_modal.dart';
@@ -62,158 +64,159 @@ class _HomeScreenState extends State<HomeScreen> {
     return ScreenUtilInit(
       designSize: Size(1280, 720),
       allowFontScaling: true,
-      builder: () => Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Row(
-          children: [
-            LeftMenu(
-              cartModel: cartModel,
-            ),
-            !updateWidget.page
-                ? Padding(
-                    padding: const EdgeInsets.all(0),
-                    child: Container(
-                      //width: MediaQuery.of(context).size.width * 0.8,
-                      width: 0.8.sw,
-                      height: 1.sh,
-                      color: Colors.transparent,
-                      child: BackgroundBubble(
-                        child: SingleChildScrollView(
-                          child: Column(
-                            children: [
-                              Center(
-                                child: BodyText(),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  InkWell(
-                                    borderRadius: BorderRadius.circular(12),
-                                    onTap: () {
-                                      _openTransactionFormModal(
-                                        context: context,
-                                        linkGit:
-                                            'https://github.com/WSixx/Meals-App',
-                                        print1:
-                                            'assets/images/meals/print1.png',
-                                        print2:
-                                            'assets/images/meals/print5.png',
-                                        print3:
-                                            'assets/images/meals/print3.png',
-                                        print4: '',
-                                      );
-                                    },
-                                    onHover: (isHovering) {
-                                      if (isHovering) {
-                                      } else {
-                                        //The mouse is no longer hovering.
-                                      }
-                                    },
-                                    child: Container(
-                                      height: 400.h,
-                                      width: 180.w,
-                                      child: MyCarousel(
-                                        print1:
-                                            'assets/images/meals/print1.png',
-                                        print2:
-                                            'assets/images/meals/print5.png',
-                                        print3:
-                                            'assets/images/meals/print3.png',
+      builder: () => ResponsiveWidget(
+        largeScreen: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Row(
+            children: [
+              LeftMenu(
+                cartModel: cartModel,
+              ),
+              !updateWidget.page
+                  ? !ResponsiveWidget.isSmallScreen(context)
+                      ? Padding(
+                          padding: const EdgeInsets.all(0),
+                          child: Container(
+                            //width: MediaQuery.of(context).size.width * 0.8,
+                            width: 0.8.sw,
+                            height: 1.sh,
+                            color: Colors.transparent,
+                            child: BackgroundBubble(
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  children: [
+                                    Center(
+                                      child: BodyText(),
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        InkWell(
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                          onTap: () {
+                                            _openTransactionFormModal(
+                                              context: context,
+                                              linkGit:
+                                                  'https://github.com/WSixx/Meals-App',
+                                              print1:
+                                                  'assets/images/meals/print1.png',
+                                              print2:
+                                                  'assets/images/meals/print5.png',
+                                              print3:
+                                                  'assets/images/meals/print3.png',
+                                              print4: '',
+                                            );
+                                          },
+                                          onHover: (isHovering) {
+                                            if (isHovering) {
+                                            } else {
+                                              //The mouse is no longer hovering.
+                                            }
+                                          },
+                                          child: Container(
+                                            height: 400.h,
+                                            width: 180.w,
+                                            child: MyCarousel(
+                                              print1:
+                                                  'assets/images/meals/print1.png',
+                                              print2:
+                                                  'assets/images/meals/print5.png',
+                                              print3:
+                                                  'assets/images/meals/print3.png',
+                                            ),
+                                          ),
+                                        ),
+                                        InkWell(
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                          child: Container(
+                                            height: 400.h,
+                                            width: 180.w,
+                                            child: MyCarousel(
+                                              print1:
+                                                  'assets/images/conews/print1.png',
+                                              print2:
+                                                  'assets/images/conews/print2.png',
+                                              print3:
+                                                  'assets/images/conews/print3.png',
+                                            ),
+                                          ),
+                                          onTap: () {
+                                            _openTransactionFormModal(
+                                              context: context,
+                                              linkGit:
+                                                  'https://github.com/WSixx/conews_flutter',
+                                              print1:
+                                                  'assets/images/conews/print1.png',
+                                              print2:
+                                                  'assets/images/conews/print2.png',
+                                              print3:
+                                                  'assets/images/conews/print3.png',
+                                              print4: '',
+                                            );
+                                          },
+                                          onHover: (isHovering) {
+                                            if (isHovering) {
+                                            } else {
+                                              //The mouse is no longer hovering.
+                                            }
+                                          },
+                                        ),
+                                        InkWell(
+                                          borderRadius:
+                                              BorderRadius.circular(12),
+                                          child: Container(
+                                            height: 400.h,
+                                            width: 180.w,
+                                            child: MyCarousel(
+                                              print1:
+                                                  'assets/images/despesas/print1.png',
+                                              print2:
+                                                  'assets/images/despesas/print2.png',
+                                              print3:
+                                                  'assets/images/despesas/print3.png',
+                                            ),
+                                          ),
+                                          onTap: () {
+                                            _openTransactionFormModal(
+                                              context: context,
+                                              linkGit:
+                                                  'https://github.com/WSixx/Despesas-Pessoais',
+                                              print1:
+                                                  'assets/images/despesas/print1.png',
+                                              print2:
+                                                  'assets/images/despesas/print2.png',
+                                              print3:
+                                                  'assets/images/despesas/print3.png',
+                                              print4: '',
+                                            );
+                                          },
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      height: 30,
+                                    ),
+                                    Container(
+                                      color: Colors.blue,
+                                      width: double.infinity,
+                                      height: 30,
+                                      child: Center(
+                                        child: Text('Lucas Silva Gonçalves'),
                                       ),
                                     ),
-                                  ),
-                                  InkWell(
-                                    borderRadius: BorderRadius.circular(12),
-                                    child: Container(
-                                      height: 400.h,
-                                      width: 180.w,
-                                      child: MyCarousel(
-                                        print1:
-                                            'assets/images/conews/print1.png',
-                                        print2:
-                                            'assets/images/conews/print2.png',
-                                        print3:
-                                            'assets/images/conews/print3.png',
-                                      ),
-                                    ),
-                                    onTap: () {
-                                      _openTransactionFormModal(
-                                        context: context,
-                                        linkGit:
-                                            'https://github.com/WSixx/conews_flutter',
-                                        print1:
-                                            'assets/images/conews/print1.png',
-                                        print2:
-                                            'assets/images/conews/print2.png',
-                                        print3:
-                                            'assets/images/conews/print3.png',
-                                        print4: '',
-                                      );
-                                    },
-                                    onHover: (isHovering) {
-                                      if (isHovering) {
-                                      } else {
-                                        //The mouse is no longer hovering.
-                                      }
-                                    },
-                                  ),
-                                  InkWell(
-                                    borderRadius: BorderRadius.circular(12),
-                                    child: Container(
-                                      height: 400.h,
-                                      width: 180.w,
-                                      child: MyCarousel(
-                                        print1:
-                                            'assets/images/despesas/print1.png',
-                                        print2:
-                                            'assets/images/despesas/print2.png',
-                                        print3:
-                                            'assets/images/despesas/print3.png',
-                                      ),
-                                    ),
-                                    onTap: () {
-                                      _openTransactionFormModal(
-                                        context: context,
-                                        linkGit:
-                                            'https://github.com/WSixx/Despesas-Pessoais',
-                                        print1:
-                                            'assets/images/despesas/print1.png',
-                                        print2:
-                                            'assets/images/despesas/print2.png',
-                                        print3:
-                                            'assets/images/despesas/print3.png',
-                                        print4: '',
-                                      );
-                                    },
-                                    onHover: (isHovering) {
-                                      if (isHovering) {
-                                      } else {
-                                        //The mouse is no longer hovering.
-                                      }
-                                    },
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 30,
-                              ),
-                              Container(
-                                color: Colors.blue,
-                                width: double.infinity,
-                                height: 30,
-                                child: Center(
-                                  child: Text('Lucas Silva Gonçalves'),
+                                  ],
                                 ),
                               ),
-                            ],
+                            ),
                           ),
-                        ),
-                      ),
-                    ),
-                  )
-                : AboutScreen(),
-          ],
+                        )
+                      : SmallScreenHome()
+                  : AboutScreen(),
+            ],
+          ),
         ),
       ),
     );

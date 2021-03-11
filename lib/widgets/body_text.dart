@@ -7,6 +7,7 @@ class BodyText extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: Size(1380, 720),
+      allowFontScaling: true,
       builder: () => Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
