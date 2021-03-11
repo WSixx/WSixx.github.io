@@ -44,18 +44,19 @@ class _HomeScreenState extends State<HomeScreen> {
     String linkGit,
   }) {
     showModalBottomSheet(
-        backgroundColor: Colors.transparent,
-        isScrollControlled: true,
-        context: context,
-        builder: (_) {
-          return ImageModal(
-            linkGit: linkGit,
-            print1: print1,
-            print2: print2,
-            print3: print3,
-            print4: print4,
-          );
-        });
+      backgroundColor: Colors.transparent,
+      isScrollControlled: true,
+      context: context,
+      builder: (_) {
+        return ImageModal(
+          linkGit: linkGit,
+          print1: print1,
+          print2: print2,
+          print3: print3,
+          print4: print4,
+        );
+      },
+    );
   }
 
   @override

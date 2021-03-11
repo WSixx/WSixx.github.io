@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => ChangeWidget(),
       child: ScreenUtilInit(
-        designSize: Size(1280, 720),
+        designSize: Size(480, 720),
         allowFontScaling: true,
         builder: () => MaterialApp(
           title: 'Lucas Gonçalves Portfólio',

@@ -32,7 +32,7 @@ class _LeftMenuState extends State<LeftMenu> {
   Widget build(BuildContext context) {
     var updateWidget = Provider.of<ChangeWidget>(context);
     return ScreenUtilInit(
-      designSize: Size(1280, 720),
+      designSize: Size(480, 720),
       allowFontScaling: true,
       builder: () => Container(
         width: MediaQuery.of(context).size.width * 0.2,
@@ -82,7 +82,10 @@ class _LeftMenuState extends State<LeftMenu> {
                 },
                 child: Text(
                   updateWidget.page ? 'HOME' : 'About',
-                  style: Theme.of(context).textTheme.headline6,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline6
+                      .copyWith(fontSize: 30),
                   //textAlign: TextAlign.start,
                 ),
               ),

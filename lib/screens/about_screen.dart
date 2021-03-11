@@ -6,7 +6,7 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(1280, 720),
+      designSize: Size(480, 720),
       allowFontScaling: true,
       builder: () => Padding(
         padding: const EdgeInsets.all(0),

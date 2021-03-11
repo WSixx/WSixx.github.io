@@ -28,7 +28,7 @@ class _ImageModalState extends State<ImageModal> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(1280, 720),
+      designSize: Size(480, 720),
       allowFontScaling: true,
       builder: () => SafeArea(
         child: Padding(
@@ -105,7 +105,10 @@ class _ImageModalState extends State<ImageModal> {
                             ),
                             Text(
                               'GitHub',
-                              style: Theme.of(context).textTheme.headline6,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headline6
+                                  .copyWith(fontSize: 20),
                             ),
                           ],
                         ),
