@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portifolio/screens/about_screen.dart';
-import 'package:my_portifolio/change_widget.dart';
+import 'file:///E:/flutter/my_portifolio/lib/utils/change_widget.dart';
 import 'package:my_portifolio/screens/home_screen.dart';
 import 'package:my_portifolio/screens/splash_screen.dart';
 import 'package:my_portifolio/utils/app_routes.dart';

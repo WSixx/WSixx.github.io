@@ -131,190 +131,127 @@ class _SmallScreenHomeState extends State<SmallScreenHome> {
             SizedBox(
               height: 30,
             ),
-            Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Stack(
+            Container(
+              height: 612,
+              child: Column(
+                children: [
+                  Expanded(
+                    child: Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(right: 50),
-                          width: 700,
-                          height: 350,
-                          child: Image.asset(
-                              'assets/images/meals/doublePrint.png'),
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: Card(
+                            child: Image.asset(
+                              'assets/images/meals/doublePrint.png',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
                         ),
-                        Positioned(
-                          bottom: 130,
-                          right: 0,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Meals APP',
-                                  style: TextStyle(
-                                    fontSize: 28,
-                                    color: Colors.white,
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.3,
+                          child: ListTile(
+                            title: Container(
+                              child: Text(
+                                'Meals APP',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.white),
+                              ),
+                            ),
+                            subtitle: Container(
+                              padding: EdgeInsets.only(top: 15),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'App desenvolvido em Flutter para estudos de Navegação entre multiplas telas',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                    softWrap: true,
                                   ),
-                                ),
-                              ),
-                              Container(
-                                padding: EdgeInsets.all(10),
-                                width: 220,
-                                color: Colors.black,
-                                child: Text(
-                                  'App developed in Flutter for navigation studies between multiple screens',
-                                  softWrap: true,
-                                  overflow: TextOverflow.fade,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline6
-                                      .copyWith(
+                                  Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: InkWell(
+                                      onTap: () async {
+                                        await launch(
+                                            'https://github.com/WSixx');
+                                      },
+                                      child: Icon(
+                                        FontAwesomeIcons.github,
                                         color: Colors.white,
-                                        fontSize: 18,
+                                        size: MediaQuery.of(context)
+                                                .size
+                                                .aspectRatio *
+                                            80,
                                       ),
-                                ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Icon(
-                                FontAwesomeIcons.github,
-                                size: 40,
-                              ),
-                            ],
+                            ),
                           ),
                         ),
                       ],
                     ),
-                  ],
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Stack(
+                  ),
+                  Expanded(
+                    child: Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(right: 50),
-                          width: 700,
-                          height: 350,
-                          child: Image.asset(
-                              'assets/images/conews/doublePrint2.png'),
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: Card(
+                            child: Image.asset(
+                              'assets/images/conews/doublePrint2.png',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
                         ),
-                        Positioned(
-                          bottom: 100,
-                          right: 0,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Covid-19 Data Cases ',
-                                  style: TextStyle(
-                                    fontSize: 28,
-                                    color: Colors.white,
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.3,
+                          child: ListTile(
+                            title: Container(
+                              child: Text(
+                                'Covid News',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.white),
+                              ),
+                            ),
+                            subtitle: Container(
+                              padding: EdgeInsets.only(top: 15),
+                              child: Column(
+                                children: [
+                                  Text(
+                                    'App desenvolvido em Flutter para estudos de Navegação entre multiplas telas',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.white),
+                                    softWrap: true,
                                   ),
-                                ),
-                              ),
-                              Container(
-                                padding: EdgeInsets.all(10),
-                                width: 300,
-                                color: Colors.black,
-                                child: Text(
-                                  'You can see the data on COVID-19 updated daily. Data on recovered, infected and deaths. Data from more than 180 countries updated daily',
-                                  softWrap: true,
-                                  overflow: TextOverflow.fade,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline6
-                                      .copyWith(
+                                  Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: InkWell(
+                                      onTap: () async {
+                                        await launch(
+                                            'https://github.com/WSixx');
+                                      },
+                                      child: Icon(
+                                        FontAwesomeIcons.github,
                                         color: Colors.white,
-                                        fontSize: 18,
+                                        size: MediaQuery.of(context)
+                                                .size
+                                                .aspectRatio *
+                                            80,
                                       ),
-                                ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Icon(
-                                FontAwesomeIcons.github,
-                                size: 40,
-                              ),
-                            ],
+                            ),
                           ),
                         ),
                       ],
                     ),
-                  ],
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Stack(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(right: 50),
-                          width: 700,
-                          height: 350,
-                          child: Image.asset(
-                              'assets/images/meals/doublePrint.png'),
-                        ),
-                        Positioned(
-                          bottom: 130,
-                          right: 0,
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  'Meals APP',
-                                  style: TextStyle(
-                                    fontSize: 28,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                padding: EdgeInsets.all(10),
-                                width: 220,
-                                color: Colors.black,
-                                child: Text(
-                                  'Hello, I am passionate about technology, currently studying the 5th semester of Computer Science, I am looking for an opportunity. ',
-                                  softWrap: true,
-                                  overflow: TextOverflow.fade,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline6
-                                      .copyWith(
-                                        color: Colors.white,
-                                        fontSize: 16,
-                                      ),
-                                ),
-                              ),
-                              Icon(
-                                FontAwesomeIcons.github,
-                                size: 40,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-              ],
-            )
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

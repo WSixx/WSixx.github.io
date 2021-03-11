@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:my_portifolio/change_widget.dart';
+import 'file:///E:/flutter/my_portifolio/lib/utils/change_widget.dart';
 import 'package:my_portifolio/widgets/shake.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
