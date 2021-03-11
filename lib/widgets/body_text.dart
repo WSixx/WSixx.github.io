@@ -6,17 +6,17 @@ class BodyText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(1280, 720),
-      allowFontScaling: true,
+      designSize: Size(1380, 720),
       builder: () => Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
           children: [
             Container(
-              width: MediaQuery.of(context).size.width * 0.5,
+              width: MediaQuery.of(context).size.width * 0.6,
               child: Center(
                 child: Text(
                   'Hi, i am Lucas Gonçalves!',
+                  textScaleFactor: 1.2,
                   style: TextStyle(
                     color: Colors.blue,
                     fontFamily: 'stjedise',
@@ -29,10 +29,11 @@ class BodyText extends StatelessWidget {
               height: 20,
             ),
             Container(
-              width: MediaQuery.of(context).size.width * 0.5,
+              width: MediaQuery.of(context).size.width * 0.6,
               child: Center(
                 child: Text(
                   'About Me:',
+                  textScaleFactor: 1.2,
                   style: TextStyle(
                     color: Colors.blue,
                     fontFamily: 'stjedise',
@@ -55,7 +56,7 @@ class BodyText extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .headline6
-                          .copyWith(color: Colors.white, fontSize: 28.ssp),
+                          .copyWith(color: Colors.white, fontSize: 32.ssp),
                     ),
                   ],
                 ),
@@ -66,6 +67,7 @@ class BodyText extends StatelessWidget {
             ),
             Text(
               'Some of my Projects:',
+              textScaleFactor: 1.5,
               style: TextStyle(
                 color: Colors.blue,
                 fontFamily: 'stjedise',
