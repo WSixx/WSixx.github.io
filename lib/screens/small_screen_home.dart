@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_portifolio/widgets/small_screen_projects_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SmallScreenHome extends StatefulWidget {
@@ -132,62 +133,10 @@ class _SmallScreenHomeState extends State<SmallScreenHome> {
               height: 912,
               child: Column(
                 children: [
-                  Expanded(
-                    child: Row(
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          child: Card(
-                            child: Image.asset(
-                              'assets/images/meals/doublePrint.png',
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width * 0.3,
-                          child: ListTile(
-                            title: Container(
-                              child: Text(
-                                'Meals APP',
-                                style: TextStyle(
-                                    fontSize: 20, color: Colors.white),
-                              ),
-                            ),
-                            subtitle: Container(
-                              padding: EdgeInsets.only(top: 15),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    'App desenvolvido em Flutter para estudos de Navegação entre multiplas telas',
-                                    style: TextStyle(
-                                        fontSize: 15, color: Colors.white),
-                                    softWrap: true,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(15.0),
-                                    child: InkWell(
-                                      onTap: () async {
-                                        await launch(
-                                            'https://github.com/WSixx');
-                                      },
-                                      child: Icon(
-                                        FontAwesomeIcons.github,
-                                        color: Colors.white,
-                                        size: MediaQuery.of(context)
-                                                .size
-                                                .aspectRatio *
-                                            50,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                  SmallScreenProjectsWidget(
+                    imageAsset: 'assets/images/meals/doublePrint.png',
+                    prjTitle: '',
+                    prjDescription: '',
                   ),
                   SizedBox(
                     height: 25,
